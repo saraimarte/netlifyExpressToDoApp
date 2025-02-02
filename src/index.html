@@ -24,7 +24,7 @@ showTasks()
 
 //get request
 async function showTasks() {
-      const  response =  await fetch('http://localhost:9000/.netlify/functions/api/tasks');
+      const  response =  await fetch('http://expnettodoapp/.netlify/functions/api/tasks');
    
      //console.log(response); 
      //console.log(response.json());
@@ -73,7 +73,7 @@ const task = formObj.get('addTask');
 
 if(task != ''){
    
-const response = await fetch('http://localhost:9000/.netlify/functions/api/tasks', {
+const response = await fetch('http://expnettodoapp/.netlify/functions/api/tasks', {
     method : "POST", 
     headers : {'Content-Type': 'application/json'} , 
     body: JSON.stringify({task})
@@ -115,7 +115,7 @@ async function deleteTask(closestPath, id, delay = 200) {
       //  await sleep(delay); // Introduce the delay
 
         async function deleter(){
-            const response = await fetch(`http://localhost:9000/.netlify/functions/api/tasks/${id}`, {
+            const response = await fetch(`http://expnettodoapp/.netlify/functions/api/tasks/${id}`, {
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },
         });
@@ -140,7 +140,7 @@ async function updateTask(closestPath, taskID, taskInput){
     const id = taskID;
     const task = taskInput;
 
-    const response = await fetch(`http://localhost:9000/.netlify/functions/api/tasks/${id}`, {
+    const response = await fetch(`http://expnettodoapp/.netlify/functions/api/tasks/${id}`, {
         method : "PUT", 
         headers : {'Content-Type': 'application/json'},
         body: JSON.stringify({task})
