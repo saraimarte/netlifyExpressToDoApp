@@ -17,8 +17,8 @@ const filePath = path.join(process.cwd(), 'src', 'index.html');
 //C:\Users\smart\projects\netExp\src\index.html and that will obv not work in production   
 
 taskRouter.get('/home', (req, res) => {
-    console.log("Serving file from:", filePath);
-    res.sendFile(filePath);
+    console.log("Serving file from:", 'filePath');
+    res.sendFile('https://expnettodoapp.netlify.app/src');
 });
 
 
