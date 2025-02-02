@@ -1,0 +1,19 @@
+{
+  "name": "netexp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type" : "commonjs",
+  "scripts": {
+    "start": "netlify-lambda serve src",
+    "build": "netlify-lambda serve src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
+  }
+}
