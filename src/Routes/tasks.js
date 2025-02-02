@@ -18,7 +18,7 @@ const filePath = path.join(process.cwd(), 'src', 'index.html');
 
 taskRouter.get('/home', (req, res) => {
     console.log("Serving file from:", 'filePath');
-    res.sendFile('https://expnettodoapp.netlify.app/src');
+    res.sendFile('https://expnettodoapp.netlify.app/src/index.html');
 });
 
 
