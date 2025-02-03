@@ -5,6 +5,13 @@ const serverless = require('serverless-http');
 const app = express();
 const router = require('./Routes/tasks.js');
 
+
+// Enable CORS with specified options for all routes
+app.use(cors({
+    origin: '*', // You can replace '*' with your frontend's specific URL if you want to limit access
+    credentials: true, // If your frontend needs to send cookies or authentication headers
+  }));
+  
 // Enable CORS for all routes
 app.use(cors()); 
 
