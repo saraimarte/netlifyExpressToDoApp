@@ -7,7 +7,7 @@ const serverless = require('serverless-http');
 
 const router = require('./Routes/tasks.js');
 
-app.use(cors({ origin: 'https://frontend200.netlify.app/*' })); 
+app.use(cors({ origin: 'https://frontend200.netlify.app' })); 
 
 
 app.use('/.netlify/functions/api/', router);
