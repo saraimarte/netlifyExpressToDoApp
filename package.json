@@ -6,7 +6,7 @@
   "type" : "commonjs",
   "scripts": {
     "start": "netlify-lambda serve src",
-    "build": "netlify-lambda serve src"
+    "build": "netlify-lambda build src"
   },
   "keywords": [],
   "author": "",

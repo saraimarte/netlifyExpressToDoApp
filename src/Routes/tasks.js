@@ -12,16 +12,6 @@ const {getTasks, addTask, deleteTask, updateTask} = require('../Controllers/cont
 
 //Routes 
 
-const filePath = path.join(process.cwd(), 'src', 'index.html');
-//__dirname does not work as intended in netlify but process.cwd() does but only locally because it gives 
-//C:\Users\smart\projects\netExp\src\index.html and that will obv not work in production   
-
-taskRouter.get('/home', (req, res) => {
-    console.log("Serving file from:", 'filePath');
-    res.sendFile(filePath);
-});
-
-
 //Get all tasks 
 taskRouter.get('/', getTasks);
 
