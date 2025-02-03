@@ -1,7 +1,6 @@
 // Use Express Router
 const express = require('express');
 const taskRouter = express.Router();
-const path = require('path');
 
 //Middleware //This is needed so that ExpressJS can actually read the JSON in the body sent from the client like so (req.body.task)
 // By default http cannot send objects so we make it a string on the client and then we 'unstring' it using this middleware that simply turns the string into a JSON object. 
